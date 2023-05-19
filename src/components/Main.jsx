@@ -2,7 +2,7 @@ import Social from "./Social";
 
 const Main = () => {
   return (
-    <div className=" w-full h-screen text-center">
+    <div id="'home" className=" w-full h-screen text-center">
       <div className="flex max-w-[1240px] w-full h-full mx-auto p-2 justify-center  items-center">
         <div className="">
           <p className="uppercase text-sm tracking-widest text-gray-400">

@@ -1,5 +1,4 @@
-// "use client"; // This is client component which is required
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import logo from "../../public/images/logo.png";
 import Link from "next/link";
@@ -8,12 +7,30 @@ import { FaFacebook, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const [shadow, setShadow] = useState(false);
   const handleToggle = () => {
     setToggle(!toggle);
   };
 
+  useEffect(() => {
+    const handleShadow = () => {
+      if (window.scrollY >= 90) {
+        setShadow(true);
+      } else {
+        setShadow(false);
+      }
+    };
+    window.addEventListener("scroll", handleShadow);
+  }, []);
+
   return (
-    <div className="fixed w-full h-20 shadow-xl z-[100]">
+    <div
+      className={
+        shadow
+          ? "fixed w-full h-20 shadow-xl z-[100]"
+          : "fixed w-full h-20  z-[100]"
+      }
+    >
       <div className="flex justify-between items-center w-full h-full px-8 2xl:px-16">
         <Link href="/">
           <Image src={logo} alt="logo" width="50" height="50" />
@@ -21,35 +38,24 @@ const Navbar = () => {
         <div>
           <ul className="hidden md:flex">
             <Link href="/">
-              <li
-                className="ml-10 text-sm uppercase hover:border-b
-              "
-              >
-                Home
-              </li>
+              <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
             </Link>
-            <Link href="/about">
-              <li
-                className="ml-10 text-sm uppercase hover:border-b
-              "
-              >
-                About
-              </li>
+            <Link href="/#about">
+              <li className="ml-10 text-sm uppercase hover:border-b">About</li>
             </Link>
-            <Link href="/skills">
-              <li
-                className="ml-10 text-sm uppercase hover:border-b
-              "
-              >
+            <Link href="/#skills">
+              <li className="ml-10 text-sm uppercase hover:border-b ">
                 Skills
               </li>
             </Link>
-            <Link href="/project">
-              <li
-                className="ml-10 text-sm uppercase hover:border-b
-              "
-              >
+            <Link href="/#projects">
+              <li className="ml-10 text-sm uppercase hover:border-b">
                 Project
+              </li>
+            </Link>
+            <Link href="/#contact">
+              <li className="ml-10 text-sm uppercase hover:border-b">
+                Contact
               </li>
             </Link>
           </ul>
@@ -91,17 +97,30 @@ const Navbar = () => {
             {/* Menu part */}
             <div className="py-4 flex flex-col">
               <ul className="uppercase">
-                <Link href="/">
-                  <li className="py-4 text-sm">Home</li>
+                <Link href="/#home">
+                  <li onClick={() => setToggle(false)} className="py-4 text-sm">
+                    Home
+                  </li>
                 </Link>
-                <Link href="/about">
-                  <li className="py-4 text-sm">About</li>
+                <Link href="/#about">
+                  <li onClick={() => setToggle(false)} className="py-4 text-sm">
+                    About
+                  </li>
                 </Link>
-                <Link href="/skill">
-                  <li className="py-4 text-sm">Skill</li>
+                <Link href="/#skills">
+                  <li onClick={() => setToggle(false)} className="py-4 text-sm">
+                    Skill
+                  </li>
                 </Link>
-                <Link href="/project">
-                  <li className="py-4 text-sm">Project</li>
+                <Link href="/#projects">
+                  <li onClick={() => setToggle(false)} className="py-4 text-sm">
+                    Project
+                  </li>
+                </Link>
+                <Link href="/#contact">
+                  <li onClick={() => setToggle(false)} className="py-4 text-sm">
+                    Contact
+                  </li>
                 </Link>
               </ul>
               <div className="pt-40 ">

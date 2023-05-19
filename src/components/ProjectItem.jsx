@@ -11,15 +11,17 @@ const ProjectItem = ({ title, img, projectUrl, gitUrl }) => {
           alt="/"
         />
       </Link>
-      <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%]">
-        <h3 className="text-2xl text-white tracking-wider text-center mb-2 ">
+      <div className="hidden group-hover:block absolute top-[20%] md:top-[30%] left-[50%] translate-x-[-50%]">
+        <h3 className="text-lg  md:text-xl  text-white tracking-wider text-center mb-2 ">
           {title}
         </h3>
-        <p className="text-center py-2 rounded-lg bg-white text-gray-600 font-bold text-lg cursor-pointer ">
+        <p className="text-center py-1 rounded-lg bg-white text-gray-600 font-bold text-sm md:text-lg cursor-pointer ">
           MERN
         </p>
         <Link href={gitUrl} target="/blank">
-          <p className="text-gray-600 underline text-center py-2">More Info</p>
+          <p className="text-gray-600 underline text-center py-2 text-sm md:text-lg">
+            More Info
+          </p>
         </Link>
       </div>
     </div>
