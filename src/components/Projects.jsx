@@ -2,9 +2,9 @@ import ProjectItem from "./ProjectItem";
 import book from "../../public/images/projects/BookReader.png";
 const Projects = () => {
   return (
-    <div className="w-full ">
+    <div id="projects" className="w-full ">
       <div className="max-w-[1240px] mx-auto px-2 py-16">
-        <p className="text-[#e49c15] text-xl uppercase  tracking-widest py-16">
+        <p className="text-[#e49c15] text-xl uppercase  tracking-widest py-12">
           Projects
         </p>
         <h2 className="py-4 text-gray-500 uppercase">Personal Projects</h2>

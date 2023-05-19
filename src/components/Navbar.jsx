@@ -38,35 +38,24 @@ const Navbar = () => {
         <div>
           <ul className="hidden md:flex">
             <Link href="/">
-              <li
-                className="ml-10 text-sm uppercase hover:border-b
-              "
-              >
-                Home
-              </li>
+              <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
             </Link>
-            <Link href="/about">
-              <li
-                className="ml-10 text-sm uppercase hover:border-b
-              "
-              >
-                About
-              </li>
+            <Link href="/#about">
+              <li className="ml-10 text-sm uppercase hover:border-b">About</li>
             </Link>
-            <Link href="/skills">
-              <li
-                className="ml-10 text-sm uppercase hover:border-b
-              "
-              >
+            <Link href="/#skills">
+              <li className="ml-10 text-sm uppercase hover:border-b ">
                 Skills
               </li>
             </Link>
-            <Link href="/project">
-              <li
-                className="ml-10 text-sm uppercase hover:border-b
-              "
-              >
+            <Link href="/#projects">
+              <li className="ml-10 text-sm uppercase hover:border-b">
                 Project
+              </li>
+            </Link>
+            <Link href="/#contact">
+              <li className="ml-10 text-sm uppercase hover:border-b">
+                Contact
               </li>
             </Link>
           </ul>
@@ -108,17 +97,30 @@ const Navbar = () => {
             {/* Menu part */}
             <div className="py-4 flex flex-col">
               <ul className="uppercase">
-                <Link href="/">
-                  <li className="py-4 text-sm">Home</li>
+                <Link href="/#home">
+                  <li onClick={() => setToggle(false)} className="py-4 text-sm">
+                    Home
+                  </li>
                 </Link>
-                <Link href="/about">
-                  <li className="py-4 text-sm">About</li>
+                <Link href="/#about">
+                  <li onClick={() => setToggle(false)} className="py-4 text-sm">
+                    About
+                  </li>
                 </Link>
-                <Link href="/skill">
-                  <li className="py-4 text-sm">Skill</li>
+                <Link href="/#skills">
+                  <li onClick={() => setToggle(false)} className="py-4 text-sm">
+                    Skill
+                  </li>
                 </Link>
-                <Link href="/project">
-                  <li className="py-4 text-sm">Project</li>
+                <Link href="/#projects">
+                  <li onClick={() => setToggle(false)} className="py-4 text-sm">
+                    Project
+                  </li>
+                </Link>
+                <Link href="/#contact">
+                  <li onClick={() => setToggle(false)} className="py-4 text-sm">
+                    Contact
+                  </li>
                 </Link>
               </ul>
               <div className="pt-40 ">

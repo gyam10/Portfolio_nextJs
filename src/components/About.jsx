@@ -2,7 +2,7 @@ import me from "../../public/images/myself.png";
 import Image from "next/image";
 const About = () => {
   return (
-    <div className="flex w-full md:h-screen p-2 items-center py-14">
+    <div id="about" className="flex w-full md:h-screen p-2 items-center py-14">
       <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-6">
         <div className="col-span-2">
           <p className="uppercase text-xl tracking-widest text-[#e49c15] px-2">

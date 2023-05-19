@@ -7,8 +7,8 @@ import { RxThickArrowUp } from "react-icons/rx";
 
 const Contact = () => {
   return (
-    <div className="w-full lg:h-screen ">
-      <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
+    <div id="contact" className="w-full lg:h-screen ">
+      <div className="max-w-[1240px] m-auto px-2 py-20 w-full">
         <p className="text-xl tracking-widest uppercase text-[#e49c15]">
           Contact
         </p>
@@ -28,8 +28,8 @@ const Contact = () => {
                 <h2 className="py-2 text-[#e49c15]">Gyamjo Dong</h2>
                 <p className="text-gray-400 py-2">Full-Stack Web Developer</p>
                 <p className="py-3 text-gray-500">
-                  I am available for freelance or full-time positioin. Contact
-                  me and let's talk
+                  I am available for freelance or full-time position. Contact me
+                  and let's talk.
                 </p>
               </div>
               <div>
