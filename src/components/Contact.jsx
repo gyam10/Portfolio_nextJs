@@ -1,5 +1,9 @@
 import Image from "next/image";
 import Social from "./Social";
+import contact from "../../public/images/contact.jpg";
+import { InputBox, TextArea } from "./Form";
+import Link from "next/link";
+import { RxThickArrowUp } from "react-icons/rx";
 
 const Contact = () => {
   return (
@@ -16,8 +20,8 @@ const Contact = () => {
               <div>
                 <Image
                   className="rounded-xl hover:scale-105 ease-in duration-300"
-                  src={""}
-                  alt=""
+                  src={contact}
+                  alt="contact"
                 />
               </div>
               <div>
@@ -34,6 +38,31 @@ const Contact = () => {
               <Social />
             </div>
           </div>
+          {/* Right Form Side */}
+
+          <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
+            <div className="P-4">
+              <form>
+                <div className="grid md:grid-cols-2 gap-4 w-full py-2">
+                  <InputBox type="text" title="Name" />
+                  <InputBox type="text" title="Phone Number" />
+                </div>
+                <InputBox type="email" title="Email" />
+                <InputBox type="text" title="Subject" />
+                <TextArea title="Message" />
+                <button className="w-full p-4 texxt-gray-300 mt-4">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div className="flex justify-end py-12">
+          <Link href="/">
+            <div className="rounded-full shadow-xl shadow-gray-300 p-4 cursor-pointer hover:scale-105 ease-in duration-300">
+              <RxThickArrowUp size={25} className="text-[#e49c15]" />
+            </div>
+          </Link>
         </div>
       </div>
     </div>

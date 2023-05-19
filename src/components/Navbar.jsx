@@ -1,5 +1,4 @@
-// "use client"; // This is client component which is required
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import logo from "../../public/images/logo.png";
 import Link from "next/link";
@@ -8,12 +7,30 @@ import { FaFacebook, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const [shadow, setShadow] = useState(false);
   const handleToggle = () => {
     setToggle(!toggle);
   };
 
+  useEffect(() => {
+    const handleShadow = () => {
+      if (window.scrollY >= 90) {
+        setShadow(true);
+      } else {
+        setShadow(false);
+      }
+    };
+    window.addEventListener("scroll", handleShadow);
+  }, []);
+
   return (
-    <div className="fixed w-full h-20 shadow-xl z-[100]">
+    <div
+      className={
+        shadow
+          ? "fixed w-full h-20 shadow-xl z-[100]"
+          : "fixed w-full h-20  z-[100]"
+      }
+    >
       <div className="flex justify-between items-center w-full h-full px-8 2xl:px-16">
         <Link href="/">
           <Image src={logo} alt="logo" width="50" height="50" />
