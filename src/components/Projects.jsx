@@ -1,5 +1,6 @@
 import ProjectItem from "./ProjectItem";
 import book from "../../public/images/projects/BookReader.png";
+import imageGen from "../../public/images/projects/image-generator.png";
 const Projects = () => {
   return (
     <div id="projects" className="w-full ">
@@ -15,6 +16,12 @@ const Projects = () => {
             img={book}
             projectUrl="https://iridescent-malabi-4fa77f.netlify.app"
             gitUrl="https://github.com/gyam10/BookReader"
+          />
+          <ProjectItem
+            title="Image Generator"
+            img={imageGen}
+            projectUrl="https://image-generation.netlify.app"
+            gitUrl="https://github.com/gyam10/Image-Generator"
           />
         </div>
       </div>

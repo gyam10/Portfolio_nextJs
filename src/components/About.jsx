@@ -9,7 +9,7 @@ const About = () => {
             About
           </p>
           <p className="py-4 px-2 text-gray-500 ">
-            Hi, I am a skilled MERN stack web developer specializing in building
+            I am a skilled MERN stack web developer specializing in building
             robust web applications. With expertise in MongoDB, Express.js,
             React.js, and Node.js, I create efficient and scalable solutions. I
             have done Engineering in Computer Science.I excel in front-end and

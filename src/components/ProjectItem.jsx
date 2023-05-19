@@ -20,7 +20,7 @@ const ProjectItem = ({ title, img, projectUrl, gitUrl }) => {
         </p>
         <Link href={gitUrl} target="/blank">
           <p className="text-gray-600 underline text-center py-2 text-sm md:text-lg">
-            More Info
+            Github
           </p>
         </Link>
       </div>

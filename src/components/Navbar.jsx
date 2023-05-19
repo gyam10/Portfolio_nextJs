@@ -3,7 +3,7 @@ import Image from "next/image";
 import logo from "../../public/images/logo.png";
 import Link from "next/link";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { FaFacebook, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import Social from "./Social";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -25,6 +25,7 @@ const Navbar = () => {
 
   return (
     <div
+      style={{ backgroundColor: "#ecf0f3" }}
       className={
         shadow
           ? "fixed w-full h-20 shadow-xl z-[100]"
@@ -123,12 +124,12 @@ const Navbar = () => {
                   </li>
                 </Link>
               </ul>
-              <div className="pt-40 ">
+              <div className="pt-16 ">
                 <p className="uppercase tracking-widest text-[#5651e5]">
                   Let's Connect
                 </p>
                 {/* Socials */}
-                <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
+                {/* <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
                   <div className="rounded-full shadow-lg shadow-gray-400 p-2 cursor-pointer hover:scale-110 ease-in duration-100">
                     <FaLinkedinIn />
                   </div>
@@ -138,10 +139,8 @@ const Navbar = () => {
                   <div className="rounded-full shadow-lg shadow-gray-400 p-2 cursor-pointer hover:scale-110 ease-in duration-100">
                     <FaFacebook />
                   </div>
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-2 cursor-pointer hover:scale-110 ease-in duration-100">
-                    <FaLinkedinIn />
-                  </div>
-                </div>
+                </div> */}
+                <Social />
               </div>
             </div>
           </div>
