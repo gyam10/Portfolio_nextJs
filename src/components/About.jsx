@@ -12,12 +12,12 @@ const About = () => {
             I am a skilled MERN stack web developer specializing in building
             robust web applications. With expertise in MongoDB, Express.js,
             React.js, and Node.js, I create efficient and scalable solutions. I
-            have done Engineering in Computer Science.I excel in front-end and
+            have done Engineering in Computer Science. I excel in front-end and
             back-end development, delivering exceptional user experiences and
             seamless functionality. I love working on new and exciting
             technologies emerging nowadays. I have a keen interest in Web
             Development and I am always looking for new opportunities to learn
-            and grow. Let's collaborate and bring your web project to life!
+            and grow. Let&apos;s collaborate and bring your web project to life!
           </p>
         </div>
         <div className="w-full h-auto shadow-xl shadow-gray-400 rounded-xl flex items-center p-4 hover:scale-105 ease-in duration-400 ">
