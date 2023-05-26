@@ -3,7 +3,7 @@ import Image from "next/image";
 import logo from "../../public/images/logo.png";
 import Link from "next/link";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import Social from "./Social";
+import { FaFacebook, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -92,7 +92,9 @@ const Navbar = () => {
                 </div>
               </div>
               <div className="border-b border-gray-400 my-4">
-                <p className="w-[85%] md:w-[90$] py-2">Let's build something</p>
+                <p className="w-[85%] md:w-[90$] py-2">
+                  Let&apos;s build something
+                </p>
               </div>
             </div>
             {/* Menu part */}
@@ -126,10 +128,10 @@ const Navbar = () => {
               </ul>
               <div className="pt-16 ">
                 <p className="uppercase tracking-widest text-[#5651e5]">
-                  Let's Connect
+                  Let&apos;s Connect
                 </p>
                 {/* Socials */}
-                {/* <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
+                <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
                   <div className="rounded-full shadow-lg shadow-gray-400 p-2 cursor-pointer hover:scale-110 ease-in duration-100">
                     <FaLinkedinIn />
                   </div>
@@ -139,8 +141,7 @@ const Navbar = () => {
                   <div className="rounded-full shadow-lg shadow-gray-400 p-2 cursor-pointer hover:scale-110 ease-in duration-100">
                     <FaFacebook />
                   </div>
-                </div> */}
-                <Social />
+                </div>
               </div>
             </div>
           </div>
